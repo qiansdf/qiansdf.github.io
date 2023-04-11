@@ -1,0 +1,327 @@
+/*顶部导航条的容器*/
+.topbar-wrapper{
+    /*设置宽度全屏*/
+    width: 100%;
+    /*设置高度和行高*/
+    height: 40px;
+    line-height: 40px;
+    /*设置背景颜色*/
+    background-color: #333;
+}
+/*设置超链接颜色*/
+.topbar a{
+    font-size: 12px;
+    color:#b0b0b0;
+    /*转化成块元素*/
+    display: block;
+}
+ /*设置移入颜色*/
+.topbar a:hover{
+    color: #fff;
+}
+ /*设置竖*/
+.topbar .line{
+    color: #424242;
+    font-size: 12px;
+    margin: 0 8px;
+    margin-top: -1px;
+}
+/*设置左侧导航栏*/
+.service,.topbar li{
+    float: left;
+}
+/*设置右侧导航栏*/
+.shop-car,.user-info{
+    float: right;
+}
+/*设置购物车*/
+.shop-car a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+/*设置购物车小图标*/
+.shop-car i{
+    margin-right: 2px;
+}
+.shop-car :hover a{
+    background-color: #fff;
+    color: #ff6700;
+}
+.shop-car{
+    margin-left: 26px;
+}
+.topbar-wrapper li{
+    position: relative;
+}
+/*设置二维码的容器*/
+.qrcode{
+    line-height: 1px;
+    position: absolute;
+    top:40px;
+    left:50%;
+    margin-left: -62px;
+    width: 124px;
+    height:0;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #ccc;
+    text-align: center;
+    /*设置渐变效果*/
+    transition: height 0.3s;
+    z-index: 99999;
+}
+.qrcode img{
+    width: 90px;
+    margin: 17px;
+}
+/*qrcode span{
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    margin-left: 33px;
+    margin-top: -9px;
+    color: #000;
+}*/
+.qrcode span{
+    color: #333;
+    font-size: 14;
+}
+/*.sanjiao{
+    
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color:#fff;
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    font-size: 6px;*/
+/*隐藏三角 二维码*/
+/*.service  .qrcode,
+.app::after{
+    display: none;
+}
+*/
+.app:hover .qrcode,
+.app:hover::after {
+    display: block;
+    height: 148px;
+}
+.app{
+    position: relative;
+}
+/*小三角*/
+.app::after{
+    content: "";
+    position: absolute;
+    display: none;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-top: none;
+    border-bottom-color: white;
+    bottom: 0;
+    left: 0;
+    margin-left: 9px;
+}
+/*下面的导航条*/
+/*设置中间的hader*/
+.header{
+    height: 100px;
+}
+.header .logo{
+    float: left;
+   
+}
+.header .logo a{
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin-top: 22px;
+    background-image: url(../img/logo-mi2.png);
+    background-size: contain;
+    float: left;
+}
+/*设置移入鼠标图片向右移动*/
+.header .logo a:hover{
+transform: translateX(1px) ;
+}
+/*设置中间导航条*/
+.nav>li{
+    float: left;
+}
+.all-goods-wrapper{
+    position: relative;
+}
+/*设置导航条的超链接颜色 大小*/
+/*设置导航条的超链接颜色 大小*/
+.nav li a{
+    color: #333;
+    font-size: 14px;
+    margin-right: 20px;
+    display: block;
+}
+
+/*设置左边菜单*/
+.left-menu{
+    width: 234px;
+    height: 420px;
+    background-color: rgba(0,0,0,.6);
+    position: absolute;
+    z-index: 999;
+    left:-120px;
+    line-height: 1;
+    padding: 20px 0;
+}
+.left-menu li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color:white;
+    margin-right: 0;
+    padding: 0 30px;
+}
+ul.left-menu li a:hover{
+    color: #fff;
+    background-color: #ff6700;
+}
+.left-menu a i{
+float: right;
+line-height: 42px;
+}
+/*设置导航条的超链接颜色 大小
+.nav li a{
+    color: #333;
+    font-size: 16px;
+    margin-right: 20px;
+    display: block;
+}*/
+
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+
+}
+/*设置中间导航条*/
+.header .nav{
+    width: 792px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 58px;   
+}
+/*隐藏全部商品*/
+.all-goods{
+    visibility:hidden;
+}
+.nav li a:hover{
+    color: red;
+}
+
+/*设置弹出层*/
+.nav .goods-info{
+    /*height: 228px;*/
+    height: 0;
+    /*border-top: 1px solid rgb(224,224,224);
+       box-shadow:  0 1px 3px rgba(0, 0, 0, 1);*/
+    position: absolute;
+    width: 100%;
+    top:120px;
+    left: 0px;
+    translate: height 0.3s;
+    z-index: 9999;
+ 
+}
+/*开启相对定位 来设置下拉框的位置*/
+.header-wrapper{
+    position: relative;
+}
+.nav .show-goods:hover~.goods-info,
+.goods-info:hover
+{   
+    background-color: #fff;
+    height: 228px;
+    border-top: 1px solid rgb(224,224,224);
+       box-shadow:  0 1px 3px rgba(0, 0, 0, 1);
+}
+/*设置搜索框*/
+.search-wrapper{
+    width: 296px;
+    height: 50px; 
+    /*background-color:red;*/
+    float:right;
+    margin-top: 25px;
+}
+.search-wrapper .search-inp{
+    box-sizing: border-box;
+   /* border: none;*/
+    float: left;
+    border: 1px solid rgb(224,224,224);
+    padding: 0 10px;
+    width: 244px;
+    height: 50px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-wrapper .search-inp:focus,          
+.search-wrapper .search-inp:focus+button
+{
+ border-color: #ff6700;
+}
+.search-wrapper .search-btn{
+    float: left;
+    width: 52px;
+    height: 50px;
+    padding: 0;     
+    background-color: #fff;
+    color:#616161;
+    font-size: 16px;
+    border: 1px solid rgb(224,224,224);
+    border-left:none ;
+}
+.search-wrapper .search-btn:hover{
+    background-color: #ff6700;
+    color:#fff;
+    border: none;
+}
+/*设置左边菜单*/
+/*.left-menu{
+    width: 234px;
+    height: 46px;
+    background-color: raga(0,0,0,.6);
+}
+/*设置banner 图片*/
+.banner{
+    position: relative;
+    height: 460px;
+}
+.banner img{
+    width: 100%;
+    vertical-align: top;
+}
+.banner .img-list li{
+    position: absolute;
+}
+/*设置导航点*/
+.pointer{
+    position: absolute;
+    bottom: 22px;
+    right: 35px;
+}
+.pointer a{
+    width: 8px;
+    height: 8px;
+    border:2px blue rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 4);
+    float:left;
+    margin-left: 6px;
+}
+.pointer a:hover,
+.pointer a.active{
+    border-color: rgba(0, 0, 0, .4);
+    background-color: rgba(255, 255, 255, .4);
+}
